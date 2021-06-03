@@ -7,11 +7,11 @@ LOAD="load.log"
 IO="io.log"
 
 echo "=======NETWORK IN/OUT(MB)========"
-inkB=`tail -1 $NETWORK | awk '{print $5}'`
-inmB=`echo "scale=2; $inkB / 1024" | bc`
+ inkB=`tail -1 $NETWORK | awk '{print $5}'`
+ inmB=`echo "scale=2; $inkB / 1024" | bc`
 
-outkB=`tail -1 $NETWORK | awk '{print $6}'`
-outmB=`echo "scale=2; $outkB / 1024" | bc`
+outkB = `tail -1 $NETWORK | awk '{print $6}'`
+outmB = `echo "scale=2; $outkB / 1024" | bc`
 echo -e "$inmB\t$outmB"
 
 
